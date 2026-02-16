@@ -1,0 +1,194 @@
+* {
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header-first-page {
+    background-color: rgb(255, 255, 0);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0px 0px 40px 10px #2f360d;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 0 20px;
+    height: 140px;
+}
+
+
+
+
+.logo-header {
+    flex: 0 0 auto;
+}
+
+.spacer-items-logo {
+    /* flex: 0 0 auto; */
+    flex-grow: 0.8;  /*configuro o quão centralizado os itens ficam, quanto maior o valor, mais centralizados ficam */
+} 
+
+.header-first-page {
+    position: relative;
+}
+
+.box-header-items {
+    position: relative;
+    display: flex;
+    gap: 27px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1 1 auto;
+    justify-content: center;
+    padding-top: 99px; /* empurra os itens para baixo */
+    align-items: center; /* alinha os itens verticalmente no centro */
+}
+
+
+
+/* NEW */
+
+.header-first-page {
+    position: relative;
+}
+
+.has-submenu {
+    position: static; /* necessário para o submenu ser posicionado corretamente */
+}
+
+    /* Submenu escondido por padrão */
+.submenu {
+  position: absolute;
+  top: 100%; /* logo abaixo do header */
+  left: 0;
+  width: 100%; /* largura da viewport */
+  max-width: 100%; /* não ultrapassa o container */
+  background-color: rgb(255, 255, 0);
+
+  
+  padding: 20px;
+  display: none;
+  z-index: 1000;
+}
+
+/* Para mostrar submenu */
+.submenu.show {
+  display: block;
+}
+
+/* Itens do submenu */
+.submenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.submenu ul li a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  padding: 8px 12px;
+  display: block;
+  white-space: nowrap;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.submenu ul li a:hover,
+.submenu ul li a:focus {
+  background-color: rgb(255, 255, 0);
+  outline: none;
+}
+
+
+
+
+/* Fim do submenu */
+
+
+
+
+
+
+ .spacer-items-icones {
+    /* flex: 0 0 auto; */
+    flex-grow: 0.7;  /*configuro o quão centralizado os itens ficam, quanto maior o valor, mais centralizados ficam */
+} 
+
+
+
+.box-header-items .header-link {
+    
+    /* espaçamento interno */
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    display: block;
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
+    /* borda invisível para manter o espaço */
+    padding-bottom: 20px;
+    transition: border-color 0.3s ease;
+    /* animação suave */
+
+}
+
+
+.header-icons {
+    display: flex;
+    gap: 20px;
+    flex: 0 0 auto;
+    align-items: center;
+}
+
+.icon-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px; /* empurra os ícones para baixo */
+}
+
+.icon-btn img {
+    width: 35px;
+    height: 35px;
+
+}
+
+
+
+.box-header-items a:hover {
+    border-bottom-color: #000;
+    /* borda preta aparece no hover */
+}
+
+
+.logo-jvc {
+    width: 130px;
+    height: auto;
+    cursor: pointer;
+}
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    .box-header-items {
+        height: 200px;
+        width: 200px;
+    }
+    
+        
+
+
+    
+}
