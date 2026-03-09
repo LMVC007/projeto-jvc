@@ -26,17 +26,44 @@
 
         <nav>
             <ul class="box-header-items">
-                <li><a class="header-link" href="">Ofertas</a></li>
-                <li><a class="header-link" href="">Lançamentos</a></li>
-                <li class="has-submenu">
+
+                <li class="has-submenu-ofertas">
+                    <a class="header-link" href="#" id="menu-ofertas" aria-haspopup="true"
+                    aria-expanded="false">Ofertas</a></li>
+
+
+                <li class="has-submenu-lancamentos">
+                    <a class="header-link" href="#" id="menu-lancamentos" aria-haspopup="true"
+                    aria-expanded="false">Lançamentos</a></li>
+
+                <li class="has-submenu-categorias">
                     <a class="header-link" href="#" id="menu-categorias" aria-haspopup="true"
                         aria-expanded="false">Categorias</a>
                 </li>
+
                 <li><a class="header-link" href="">Collection's</a></li>
             </ul>
         </nav>
 
-        <div class="submenu" id="submenu-categorias" role="menu" aria-labelledby="menu-categorias">
+        <div class="submenu-ofertas" id="submenu-ofertas" role="menu" aria-labelledby="menu-ofertas">
+            <ul>
+                <li><a href="#">Primeiro Violão</a></li>
+                <li><a href="#">Primeiro Cavaquinho</a></li>
+                <li><a href="#">Queima de estoque</a></li>
+                <li><a href="#">Outros</a></li>
+            </ul>
+        </div>
+
+        <div class="submenu-lancamentos" id="submenu-lancamentos" role="menu" aria-labelledby="menu-lancamentos">
+            <ul>
+                <li><a href="#">Coleção de Inverno 2026</a></li>
+                <li><a href="#">Coleção Summer</a></li>
+                <li><a href="#">Pre-venda Natal</a></li>
+                <li><a href="#">Mais novidades</a></li>
+            </ul>
+        </div>
+
+        <div class="submenu-categorias" id="submenu-categorias" role="menu" aria-labelledby="menu-categorias">
             <ul>
                 <li><a href="#">Categorias 1</a></li>
                 <li><a href="#">Categorias 2</a></li>

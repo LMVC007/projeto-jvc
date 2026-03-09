@@ -8,7 +8,7 @@
 .header-first-page {
     background-color: rgb(255, 255, 0);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    box-shadow: inset 0px 0px 40px 10px #2f360d;
+    box-shadow: inset 0px 0px 40px 10px #000000;
     display: flex;
     /* justify-content: space-between; */
     align-items: center;
@@ -47,38 +47,39 @@
 
 
 
-/* NEW */
 
 .header-first-page {
     position: relative;
 }
 
-.has-submenu {
+/* NEW */
+
+.has-submenu-ofertas {
     position: static; /* necessário para o submenu ser posicionado corretamente */
 }
 
     /* Submenu escondido por padrão */
-.submenu {
+.submenu-ofertas {
   position: absolute;
   top: 100%; /* logo abaixo do header */
   left: 0;
   width: 100%; /* largura da viewport */
   max-width: 100%; /* não ultrapassa o container */
   background-color: rgb(255, 255, 0);
-
-  
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 0px 40px 10px #000000;
   padding: 20px;
   display: none;
   z-index: 1000;
 }
 
 /* Para mostrar submenu */
-.submenu.show {
+.submenu-ofertas.show {
   display: block;
 }
 
 /* Itens do submenu */
-.submenu ul {
+.submenu-ofertas ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -87,7 +88,7 @@
   gap: 15px;
 }
 
-.submenu ul li a {
+.submenu-ofertas ul li a {
   font-weight: bold;
   text-decoration: none;
   color: #333;
@@ -98,21 +99,124 @@
   transition: background-color 0.3s ease;
 }
 
-.submenu ul li a:hover,
-.submenu ul li a:focus {
+.submenu-ofertas ul li  a:hover,
+.submenu-ofertas ul li a:focus {
   background-color: rgb(255, 255, 0);
   outline: none;
 }
 
 
-
-
 /* Fim do submenu */
 
+/* NEW */
 
+.has-submenu-lancamentos {
+    position: static; /* necessário para o submenu ser posicionado corretamente */
+}
 
+    /* Submenu escondido por padrão */
+.submenu-lancamentos {
+  position: absolute;
+  top: 100%; /* logo abaixo do header */
+  left: 0;
+  width: 100%; /* largura da viewport */
+  max-width: 100%; /* não ultrapassa o container */
+  background-color: rgb(255, 255, 0);
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 0px 40px 10px #2f360d;
+  padding: 20px;
+  display: none;
+  z-index: 1000;
+}
 
+/* Para mostrar submenu */
+.submenu-lancamentos.show {
+  display: block;
+}
 
+/* Itens do submenu */
+.submenu-lancamentos ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.submenu-lancamentos ul li a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  padding: 8px 12px;
+  display: block;
+  white-space: nowrap;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.submenu-lancamentos ul li  a:hover,
+.submenu-lancamentos ul li a:focus {
+  background-color: rgb(255, 255, 0);
+  outline: none;
+}
+
+/* FINNISH */
+
+/* NEW */
+
+.has-submenu-categorias {
+    position: static; /* necessário para o submenu ser posicionado corretamente */
+}
+
+    /* Submenu escondido por padrão */
+.submenu-categorias {
+  position: absolute;
+  top: 100%; /* logo abaixo do header */
+  left: 0;
+  width: 100%; /* largura da viewport */
+  max-width: 100%; /* não ultrapassa o container */
+  background-color: rgb(255, 255, 0);
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 0px 40px 10px #2f360d;
+  padding: 20px;
+  display: none;
+  z-index: 1000;
+}
+
+/* Para mostrar submenu */
+.submenu-categorias.show {
+  display: block;
+}
+
+/* Itens do submenu */
+.submenu-categorias ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.submenu-categorias ul li a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  padding: 8px 12px;
+  display: block;
+  white-space: nowrap;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.submenu-categorias ul li  a:hover,
+.submenu-categorias ul li a:focus {
+  background-color: rgb(255, 255, 0);
+  outline: none;
+}
+
+/* Fim do submenu */
 
  .spacer-items-icones {
     /* flex: 0 0 auto; */
@@ -181,14 +285,15 @@
 
 
 
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
     .box-header-items {
-        height: 200px;
-        width: 200px;
+        flex-direction: column;
+        /* empilha os itens */
+        gap: 10px;
     }
-    
-        
 
-
-    
+    .box-header-items li {
+        width: 100%;
+        /* cada item ocupa a linha inteira */
+    }
 }
